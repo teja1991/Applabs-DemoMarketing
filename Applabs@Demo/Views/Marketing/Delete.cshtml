@@ -1,0 +1,64 @@
+﻿@model Applabs_Demo.Models.Marketing
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>CLose Marketing</h2>
+
+<h3>Are you sure you want to Close this?</h3>
+<div>
+    <h4>Marketing</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marketer_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marketer_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Start_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Start_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.case_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.case_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Close_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Close_date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Close" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
